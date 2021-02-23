@@ -7,6 +7,24 @@ import Foundation
 
 class BerlinClock{
     
+    func convertToBerlinTime(time: String, separator: String) -> String {
+
+        let array = time.components(separatedBy: ":")
+        let hours = Int(array[0]) ?? 0
+        let minutes =  Int(array[1]) ?? 0
+        let secondes = Int(array[2]) ?? 0
+        
+        return getSeconds(seconds: secondes)
+            + separator
+            +  getTopHours(hour: hours)
+            + separator
+            + getBottomHours(hour: hours)
+            + separator
+            + getTopMinutes(minutes: minutes)
+            + separator
+            + getBottomMinutes(minutes: minutes)
+    }
+    
     func getSeconds(seconds: Int) -> String {
         return seconds % 2 == 0 ? "Y" : "O"
     }

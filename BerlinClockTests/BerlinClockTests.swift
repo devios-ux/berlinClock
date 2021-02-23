@@ -77,4 +77,10 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual("YYYY", berlinClock.getBottomMinutes(minutes: 59))
         
     }
+    
+    // Berlin Clock it should "result in correct seconds, hours and minutes" in {
+    func testBerlinClockShouldResultInCorrectSecondsHoursAndMinutes() {
+        let result = berlinClock.convertToBerlinTime(time: "16:37:16", separator: " ")
+        XCTAssertEqual("Y RRRO ROOO YYRYYRYOOOO YYOO", result)
+    }
 }
