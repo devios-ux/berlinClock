@@ -32,6 +32,18 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual("RRRR", berlinClock.getTopHours(hour: 24))
     }
     
+    // Botom hours should have 4 lamps
+    func testBottomHoursShouldHave4Lamps(){
+        XCTAssertEqual( 4, berlinClock.getBottomHours(hour: 5).count);
+    }
+    
+    // Bottom hours should light a red lamp for every hour left from top hours
+    func testBottomHoursShouldLightRedLampForEveryHourLeftFromTopHours(){
+        XCTAssertEqual("OOOO", berlinClock.getBottomHours(hour: 0))
+        XCTAssertEqual("RRRO", berlinClock.getBottomHours(hour: 13))
+        XCTAssertEqual("RRRO", berlinClock.getBottomHours(hour: 23))
+        XCTAssertEqual("RRRR", berlinClock.getBottomHours(hour: 24))
+    }
     
     
     
