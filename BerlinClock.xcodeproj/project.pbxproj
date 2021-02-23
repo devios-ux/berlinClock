@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DF43F25E5206400086AFD /* BerlinClock.swift */; };
 		5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E49FF25E515D500A01DFF /* AppDelegate.swift */; };
 		5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */; };
 		5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0325E515D500A01DFF /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0DF43F25E5206400086AFD /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		5B5E49FC25E515D500A01DFF /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5E49FF25E515D500A01DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +78,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0DF43E25E5204400086AFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DF43F25E5206400086AFD /* BerlinClock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5B5E49F325E515D500A01DFF = {
 			isa = PBXGroup;
 			children = (
+				5B0DF43E25E5204400086AFD /* Models */,
 				5B5E49FE25E515D500A01DFF /* BerlinClock */,
 				5B5E4A1525E515E200A01DFF /* BerlinClockTests */,
 				5B5E4A2025E515E200A01DFF /* BerlinClockUITests */,
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */,
 				5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */,
 				5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */,
 				5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */,
