@@ -65,4 +65,16 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual("YYRYYRYYRYY", berlinClock.getTopMinutes(minutes: 59))
         
     }
+    
+    // Bottom minutes should have 4 lamps
+    func testBottomMinutesShouldHave4Lamps(){
+        XCTAssertEqual(4, berlinClock.getBottomMinutes(minutes: 0).count)
+    }
+    
+    func testBottomMinutesShouldLightYellowLampForEveryMinuteLeftFromTopMinutes(){
+        XCTAssertEqual("OOOO", berlinClock.getBottomMinutes(minutes: 0))
+        XCTAssertEqual("YYOO", berlinClock.getBottomMinutes(minutes: 17))
+        XCTAssertEqual("YYYY", berlinClock.getBottomMinutes(minutes: 59))
+        
+    }
 }
