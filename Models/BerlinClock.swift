@@ -40,4 +40,9 @@ class BerlinClock{
     func getBottomOfOnSigns(number: Int) -> Int {
         return number % 5
     }
+    
+    func getTopMinutes(minutes: Int) -> String {
+        return getOnOff(lamps: 11, onSigns: getTopNumberOfOnSigns(number: minutes), onSign: "Y").replacingOccurrences(of: "YYY", with: "YYR")
+    }
+    
 }

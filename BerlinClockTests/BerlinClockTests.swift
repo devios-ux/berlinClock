@@ -45,6 +45,24 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual("RRRR", berlinClock.getBottomHours(hour: 24))
     }
     
+    // Top minutes should have 11 lamps
+    func testTopMinutesShouldHave11Lamps(){
+        XCTAssertEqual(11, berlinClock.getTopMinutes(minutes: 34).count)
+    }
     
-    
+    // Top minutes should have 3rd, 6th, 9th lamps in red to indicatefirst quarter, half and last quarter
+    func testTopMinutesShouldHave3rd6thAnd9thLampsInRedToIndicateFirstQuarterHalfAndLastQuarter(){
+        let minutes = berlinClock.getTopMinutes(minutes: 32)
+        XCTAssertEqual("R", minutes[String.Index(utf16Offset: 2, in: minutes)])
+        XCTAssertEqual("R", minutes[String.Index(utf16Offset: 5, in: minutes)])
+        XCTAssertEqual("O", minutes[String.Index(utf16Offset: 8, in: minutes)])
+    }
+ 
+    // Top minutes should light a yellow lamp for every 5 minutes unless it's first quarter, half or last quarter
+    func testTopMinutesShouldLightYellowLampForEvery5MinutesUnlessItIsFirstQuarterHalfOrLastQuarter() {
+        XCTAssertEqual("OOOOOOOOOOO", berlinClock.getTopMinutes(minutes: 0))
+        XCTAssertEqual("YYROOOOOOOO", berlinClock.getTopMinutes(minutes: 17))
+        XCTAssertEqual("YYRYYRYYRYY", berlinClock.getTopMinutes(minutes: 59))
+        
+    }
 }
