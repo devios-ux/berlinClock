@@ -21,8 +21,28 @@ The final two rows represent the minutes. The upper row represents 5 minute bloc
 
 To integrate BerlinClock into your Xcode project using CocoaPods, you need to specify in your Podfile his private Pod-Specs repository:
 
-<code>source 'https://github.com/devios-ux/CocoaPods-Specs.git'</code> 
+```
+source 'https://github.com/devios-ux/CocoaPods-Specs.git'</code> 
 
-<code> ... </code> 
+... 
 
-<code>pod 'BerlinClock'</code>
+pod 'BerlinClock'
+```
+
+In your ViewController, import the framework :
+```swift
+import BerlinClock
+```
+After that, declare the data member of your ViewController like :
+
+```swift
+var berlinClockView: BerlinClockView!
+```
+
+In the viewDidLoad method of your ViewController, add these two instructions after the super.viewDidLoad() :
+```swift
+self.berlinClockView = BerlinClockView()
+self.view.addSubview(self.berlinClockView)
+```
+
+That's it ! 
