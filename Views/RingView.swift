@@ -5,11 +5,11 @@
 
 import Foundation
 import UIKit
-class RingView: UIView {
+public class RingView: UIView {
     
     var fillColor = UIColor.yellow.cgColor
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         drawRingFittingInsideView()
     }
     

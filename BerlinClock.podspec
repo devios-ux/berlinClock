@@ -1,19 +1,21 @@
 Pod::Spec.new do |spec|
   spec.name             = 'BerlinClock'
-  spec.version          = '1.0.0'
+  spec.version          = '1.0.1'
 
-  spec.platform     = :ios, '10.0'
-  spec.requires_arc = true
+  spec.platform         = :ios, '10.0'
 
   spec.license          = { :type => 'BSD' }
   spec.homepage         = 'https://github.com/devios-ux/berlinClock'
   spec.authors          = { 'exercice berlin' => 'devios' }
   spec.summary          = 'Berlin Clock View for iOS and macOS.'
   spec.description	    = 'Berlin Clock UIView for iOS and MacOs.'
-  spec.source           = { :git => 'https://github.com/devios-ux/berlinClock.git', :tag => '1.0.0' }
-  spec.source_files     =  'Models/*' , 'Views/*'
+  spec.source           = { :git => 'https://github.com/devios-ux/berlinClock.git', :tag => spec.version.to_s }
+  spec.source_files     =  'Models/*', 'Views/*'
   #spec.framework        = 'SystemConfiguration'
-  spec.requires_arc     = true
+  #spec.requires_arc     = true
   
+  spec.swift_version = '4.2'
+  spec.ios.deployment_target = '10.0'
+
   
 end

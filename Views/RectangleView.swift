@@ -5,11 +5,11 @@
 
 import Foundation
 import UIKit
-class RectangleView: UIView {
+public class RectangleView: UIView {
     
     var fillColor = UIColor.yellow.cgColor
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         drawRingFittingInsideView(rect: rect)
     }
     

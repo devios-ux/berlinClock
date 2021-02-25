@@ -5,7 +5,7 @@
 
 import Foundation
 
-class BerlinClock {
+public class BerlinClock {
     
     var hours:Int
     var minutes:Int

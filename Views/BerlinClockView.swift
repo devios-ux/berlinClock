@@ -11,7 +11,7 @@ protocol BerlinClockDelegate : AnyObject {
     func berlinClockDidChanged(_ berlinClockString: String)
 }
 
-class BerlinClockView : UIView {
+public class BerlinClockView : UIView {
     
     var circle: RingView!
     var rect11: RectangleView!
