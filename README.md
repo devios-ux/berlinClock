@@ -22,7 +22,7 @@ The final two rows represent the minutes. The upper row represents 5 minute bloc
 To integrate BerlinClock into your Xcode project using CocoaPods, you need to specify in your Podfile his private Pod-Specs repository:
 
 ```
-source 'https://github.com/devios-ux/CocoaPods-Specs.git'</code> 
+source 'https://github.com/devios-ux/CocoaPods-Specs.git'
 
 ... 
 
