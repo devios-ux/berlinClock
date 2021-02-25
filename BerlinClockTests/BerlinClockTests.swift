@@ -5,6 +5,8 @@
 //
 
 import XCTest
+import UIKit
+
 @testable import BerlinClock
 
 class BerlinClockTests: XCTestCase {
@@ -82,5 +84,23 @@ class BerlinClockTests: XCTestCase {
     func testBerlinClockShouldResultInCorrectSecondsHoursAndMinutes() {
         let result = berlinClock.convertToBerlinTime(time: "16:37:16", separator: " ")
         XCTAssertEqual("Y RRRO ROOO YYRYYRYOOOO YYOO", result)
+    }
+    
+    func testBerlinClockOutpout() {
+        
+        let topHours = BerlinHourOuput(representation: "RROO")
+        let bottomHours = BerlinHourOuput(representation: "ROO")
+        let topMinutes = BerlinTopMinuteOuput(representation: "YYRYYRYYROO")
+        let bottomMinutes = BerlinBottomMinuteOuput(representation: "YYOO")
+        let topHoursColors = topHours.getColors()
+        let bottomHoursColors = bottomHours.getColors()
+        let topMinutesColors = topMinutes.getColors()
+        let bottomMinutesColors = bottomMinutes.getColors()
+        
+        XCTAssertEqual([.red, .red, .white, .white], topHoursColors)
+        XCTAssertEqual([.red, .white, .white, .white], bottomHoursColors)
+        XCTAssertEqual([.yellow, .yellow, .white, .white], bottomMinutesColors)
+        XCTAssertEqual([.yellow, .yellow, .red, .yellow, .yellow, .red, .yellow, .yellow, .red,.white, .white], topMinutesColors)
+ 
     }
 }

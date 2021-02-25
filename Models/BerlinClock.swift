@@ -5,7 +5,25 @@
 
 import Foundation
 
-class BerlinClock{
+class BerlinClock {
+    
+    var hours:Int
+    var minutes:Int
+    var secondes:Int
+        
+    init() {
+        hours = Calendar.current.component(.hour, from: Date())
+        minutes = Calendar.current.component(.minute, from: Date())
+        secondes = Calendar.current.component(.second, from: Date())
+    }
+    
+    func getBerlinTimeNow() -> String {
+        hours = Calendar.current.component(.hour, from: Date())
+        minutes = Calendar.current.component(.minute, from: Date())
+        secondes = Calendar.current.component(.second, from: Date())
+        let timeString = "\(hours):\(minutes):\(secondes)"
+        return convertToBerlinTime(time: timeString, separator: " ")
+    }
     
     func convertToBerlinTime(time: String, separator: String) -> String {
 
@@ -14,15 +32,15 @@ class BerlinClock{
         let minutes =  Int(array[1]) ?? 0
         let secondes = Int(array[2]) ?? 0
         
-        return getSeconds(seconds: secondes)
-            + separator
-            +  getTopHours(hour: hours)
-            + separator
-            + getBottomHours(hour: hours)
-            + separator
-            + getTopMinutes(minutes: minutes)
-            + separator
-            + getBottomMinutes(minutes: minutes)
+        return  getSeconds(seconds: secondes)
+                + separator
+                + getTopHours(hour: hours)
+                + separator
+                + getBottomHours(hour: hours)
+                + separator
+                + getTopMinutes(minutes: minutes)
+                + separator
+                + getBottomMinutes(minutes: minutes)
     }
     
     func getSeconds(seconds: Int) -> String {
