@@ -18,13 +18,13 @@ public class RingView: UIView {
         let desiredLineWidth:CGFloat = 1 // your desired value
             
         let circlePath = UIBezierPath(
-                arcCenter: CGPoint(x:halfSize,y:halfSize),
-                radius: CGFloat( halfSize - (desiredLineWidth/2) ),
-                startAngle: CGFloat(0),
-                endAngle:CGFloat(M_PI * 2),
-                clockwise: true)
-    
-         let shapeLayer = CAShapeLayer()
+            arcCenter: CGPoint(x:halfSize,y:halfSize),
+            radius: CGFloat( halfSize - (desiredLineWidth/2) ),
+            startAngle: CGFloat(0),
+            endAngle:CGFloat(Double.pi * 2),
+            clockwise: true)
+
+        let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
             
         shapeLayer.fillColor = self.fillColor

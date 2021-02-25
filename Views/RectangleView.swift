@@ -14,13 +14,8 @@ public class RectangleView: UIView {
     }
     
     internal func drawRingFittingInsideView(rect: CGRect) -> () {
-        let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
         let desiredLineWidth:CGFloat = 1 // your desired value
-    
-       
         let rectPath = UIBezierPath(roundedRect: rect, cornerRadius: 2)
-        
-        
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = rectPath.cgPath
             
@@ -28,7 +23,7 @@ public class RectangleView: UIView {
         shapeLayer.strokeColor = UIColor.brown.cgColor
         shapeLayer.lineWidth = desiredLineWidth
     
-         layer.addSublayer(shapeLayer)
+        layer.addSublayer(shapeLayer)
      }
     
     func setFillColor(color: UIColor){

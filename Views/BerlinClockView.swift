@@ -157,10 +157,8 @@ public class BerlinClockView : UIView {
             let hour = Calendar.current.component(.hour, from: Date())
             let minute = Calendar.current.component(.minute, from: Date())
             let second = Calendar.current.component(.second, from: Date())
-            let timeString = "\(hour):\(minute):\(second)"
             
             let berlin = BerlinClock()
-            //berlin.delegate = self
                         
             let string = berlin.getSeconds(seconds: second)
             let topHourString = berlin.getTopHours(hour: hour)
