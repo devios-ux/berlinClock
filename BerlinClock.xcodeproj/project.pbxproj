@@ -46,6 +46,8 @@
 		5B286B1B25E7183200E455C8 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5B286B2825E7298500E455C8 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
+		5B286B3B25E7B05D00E455C8 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		5B286B6125E7B54100E455C8 /* BerlinClock.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BerlinClock.podspec; sourceTree = "<group>"; };
 		5B5E49FC25E515D500A01DFF /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5E49FF25E515D500A01DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		5B5E49F325E515D500A01DFF = {
 			isa = PBXGroup;
 			children = (
+				5B286B6125E7B54100E455C8 /* BerlinClock.podspec */,
+				5B286B3B25E7B05D00E455C8 /* Podfile */,
 				5B286B1A25E717FF00E455C8 /* Views */,
 				5B0DF44425E5420E00086AFD /* README.md */,
 				5B0DF43E25E5204400086AFD /* Models */,
