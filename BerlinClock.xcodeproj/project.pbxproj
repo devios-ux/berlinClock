@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DF43F25E5206400086AFD /* BerlinClock.swift */; };
+		5B286B0325E6CFA900E455C8 /* BerlinClockConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */; };
+		5B286B1C25E7183200E455C8 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B1B25E7183200E455C8 /* RingView.swift */; };
+		5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B2825E7298500E455C8 /* RectangleView.swift */; };
+		5B286B2E25E7390A00E455C8 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */; };
 		5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E49FF25E515D500A01DFF /* AppDelegate.swift */; };
 		5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */; };
 		5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0325E515D500A01DFF /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		5B0DF43F25E5206400086AFD /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		5B0DF44425E5420E00086AFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockConvert.swift; sourceTree = "<group>"; };
+		5B286B1B25E7183200E455C8 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		5B286B2825E7298500E455C8 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
 		5B5E49FC25E515D500A01DFF /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5E49FF25E515D500A01DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,13 +91,25 @@
 			isa = PBXGroup;
 			children = (
 				5B0DF43F25E5206400086AFD /* BerlinClock.swift */,
+				5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5B286B1A25E717FF00E455C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B286B1B25E7183200E455C8 /* RingView.swift */,
+				5B286B2825E7298500E455C8 /* RectangleView.swift */,
+				5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5B5E49F325E515D500A01DFF = {
 			isa = PBXGroup;
 			children = (
+				5B286B1A25E717FF00E455C8 /* Views */,
 				5B0DF44425E5420E00086AFD /* README.md */,
 				5B0DF43E25E5204400086AFD /* Models */,
 				5B5E49FE25E515D500A01DFF /* BerlinClock */,
@@ -272,7 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */,
+				5B286B2E25E7390A00E455C8 /* BerlinClockView.swift in Sources */,
 				5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */,
+				5B286B0325E6CFA900E455C8 /* BerlinClockConvert.swift in Sources */,
+				5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */,
+				5B286B1C25E7183200E455C8 /* RingView.swift in Sources */,
 				5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */,
 				5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */,
 			);

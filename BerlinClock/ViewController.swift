@@ -5,13 +5,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BerlinClockDelegate {
+    func berlinClockDidChanged(_ clock: String) {
+        
+        print("trace: \(clock)")
+    }
+    
 
+    var berlinClockView: BerlinClockView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.berlinClockView = BerlinClockView()
+        self.berlinClockView.delegate = self
+        self.view.addSubview(self.berlinClockView)
     }
-
-
+    
+    
 }
+
+
+
 
