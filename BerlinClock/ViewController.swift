@@ -19,6 +19,8 @@ class ViewController: UIViewController, BerlinClockDelegate {
         self.berlinClockView = BerlinClockView()
         self.berlinClockView.delegate = self
         self.view.addSubview(self.berlinClockView)
+        
+      
     }
     
     

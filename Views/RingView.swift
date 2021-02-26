@@ -31,7 +31,13 @@ public class RingView: UIView {
         shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.lineWidth = desiredLineWidth
     
-         layer.addSublayer(shapeLayer)
+        if layer.sublayers == nil || layer.sublayers?.count == 0{
+            layer.addSublayer(shapeLayer)
+        }
+        else{
+            layer.sublayers?[0] = shapeLayer
+        }
+        
      }
     
     func setFillColor(color: UIColor){

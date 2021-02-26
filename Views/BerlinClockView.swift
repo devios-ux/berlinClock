@@ -13,6 +13,7 @@ protocol BerlinClockDelegate : AnyObject {
 
 public class BerlinClockView : UIView {
     
+
     var circle: RingView!
     var rect11: RectangleView!
     var rect12: RectangleView!
@@ -152,42 +153,48 @@ public class BerlinClockView : UIView {
         self.backgroundColor=UIColor.lightGray
         self.layer.borderColor = UIColor.red.cgColor
     
-        // update control every secondes
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            let hour = Calendar.current.component(.hour, from: Date())
-            let minute = Calendar.current.component(.minute, from: Date())
-            let second = Calendar.current.component(.second, from: Date())
+    // update control every secondes
+    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        let hour = Calendar.current.component(.hour, from: Date())
+        let minute = Calendar.current.component(.minute, from: Date())
+        let second = Calendar.current.component(.second, from: Date())
+        
+        let berlin = BerlinClock()
+                    
+        let string = berlin.getSeconds(seconds: second)
+        let topHourString = berlin.getTopHours(hour: hour)
+        let bottomHourString = berlin.getBottomHours(hour: hour)
+        let bottomMinutesString = berlin.getBottomMinutes(minutes: minute)
+        let topMinutesString = berlin.getTopMinutes(minutes: minute)
+        
+        let topHourcolors = BerlinHourOuput(representation: topHourString).getColors()
+        let bottomHoursColors = BerlinHourOuput(representation: bottomHourString).getColors()
+        let bottomMinutesColors = BerlinBottomMinuteOuput(representation: bottomMinutesString).getColors()
+        let topMinutesColors = BerlinTopMinuteOuput(representation: topMinutesString).getColors()
+        
+        DispatchQueue.main.async {
             
-            let berlin = BerlinClock()
-                        
-            let string = berlin.getSeconds(seconds: second)
-            let topHourString = berlin.getTopHours(hour: hour)
-            let bottomHourString = berlin.getBottomHours(hour: hour)
-            let bottomMinutesString = berlin.getBottomMinutes(minutes: minute)
-            let topMinutesString = berlin.getTopMinutes(minutes: minute)
             
-            let topHourcolors = BerlinHourOuput(representation: topHourString).getColors()
-            let bottomHoursColors = BerlinHourOuput(representation: bottomHourString).getColors()
-            let bottomMinutesColors = BerlinBottomMinuteOuput(representation: bottomMinutesString).getColors()
-            let topMinutesColors = BerlinTopMinuteOuput(representation: topMinutesString).getColors()
+            self.circle.fillColor = string == "Y" ? UIColor.yellow.cgColor : UIColor.red.cgColor
             
-            DispatchQueue.main.async {
-                self.circle.fillColor = string == "Y" ? UIColor.yellow.cgColor : UIColor.red.cgColor
-                self.circle.setNeedsDisplay()
-                
-                self.setTopHoursColors(colors: topHourcolors)
-                self.setBottomHoursColors(colors: bottomHoursColors)
-                self.setBottomMinuteColors(colors: bottomMinutesColors)
-                self.setTopMinuteColors(colors: topMinutesColors)
-                
-                let stringRespresentation = "\(topHourString) \(bottomHourString) \(topMinutesString) \(bottomMinutesString)"
-                
-                //print("\(timeString) - \(stringRespresentation)")
-                
-                self.delegate?.berlinClockDidChanged(stringRespresentation)
-                
-            }
+            self.circle.setNeedsDisplay()
+            
+            //potential memory grow
+            self.setTopHoursColors(colors: topHourcolors)
+            
+            self.setBottomHoursColors(colors: bottomHoursColors)
+            self.setBottomMinuteColors(colors: bottomMinutesColors)
+            self.setTopMinuteColors(colors: topMinutesColors)
+            
+            
+            let stringRespresentation = "\(topHourString) \(bottomHourString) \(topMinutesString) \(bottomMinutesString)"
+            
+            //print("\(timeString) - \(stringRespresentation)")
+            
+            self.delegate?.berlinClockDidChanged(stringRespresentation)
+            
         }
+    }
 
    }
     
