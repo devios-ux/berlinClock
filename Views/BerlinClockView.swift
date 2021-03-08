@@ -81,10 +81,13 @@ public class BerlinClockView : UIView {
     
         let x = 150
         let widthCircle = Int(self.frame.width) - 2 * x
-        circle = RingView(frame: CGRect(x: x, y: 0, width: widthCircle, height: widthCircle))
+        
+        let paddingTop = 10
+    
+        circle = RingView(frame: CGRect(x: x, y: 0 + paddingTop, width: widthCircle, height: widthCircle))
         
         
-        var yRect = widthCircle + 10
+        var yRect = paddingTop + Int(self.circle.frame.height) + 10
         
         rect11 = RectangleView(frame: CGRect(x: 0, y:yRect, width: Int(self.frame.width) / 4 , height: 100))
         rect12 = RectangleView(frame: CGRect(x: 1 * Int(rect11.frame.width), y:yRect, width: Int(self.frame.width) / 4, height: 100))
@@ -174,22 +177,17 @@ public class BerlinClockView : UIView {
         
         DispatchQueue.main.async {
             
-            
             self.circle.fillColor = string == "Y" ? UIColor.yellow.cgColor : UIColor.red.cgColor
-            
+        
             self.circle.setNeedsDisplay()
             
-            //potential memory grow
             self.setTopHoursColors(colors: topHourcolors)
             
             self.setBottomHoursColors(colors: bottomHoursColors)
             self.setBottomMinuteColors(colors: bottomMinutesColors)
             self.setTopMinuteColors(colors: topMinutesColors)
             
-            
             let stringRespresentation = "\(topHourString) \(bottomHourString) \(topMinutesString) \(bottomMinutesString)"
-            
-            //print("\(timeString) - \(stringRespresentation)")
             
             self.delegate?.berlinClockDidChanged(stringRespresentation)
             

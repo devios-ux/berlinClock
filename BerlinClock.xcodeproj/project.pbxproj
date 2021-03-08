@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DF43F25E5206400086AFD /* BerlinClock.swift */; };
+		5B1999DE25F5A8FF008FA194 /* GraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1999DD25F5A8FF008FA194 /* GraphicView.swift */; };
 		5B286B0325E6CFA900E455C8 /* BerlinClockConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */; };
 		5B286B1C25E7183200E455C8 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B1B25E7183200E455C8 /* RingView.swift */; };
 		5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B2825E7298500E455C8 /* RectangleView.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		5B0DF43F25E5206400086AFD /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		5B0DF44425E5420E00086AFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5B1999DD25F5A8FF008FA194 /* GraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicView.swift; sourceTree = "<group>"; };
 		5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockConvert.swift; sourceTree = "<group>"; };
 		5B286B1B25E7183200E455C8 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5B286B2825E7298500E455C8 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				5B286B1B25E7183200E455C8 /* RingView.swift */,
 				5B286B2825E7298500E455C8 /* RectangleView.swift */,
 				5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */,
+				5B1999DD25F5A8FF008FA194 /* GraphicView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */,
 				5B286B1C25E7183200E455C8 /* RingView.swift in Sources */,
 				5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */,
+				5B1999DE25F5A8FF008FA194 /* GraphicView.swift in Sources */,
 				5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

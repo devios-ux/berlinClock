@@ -5,15 +5,14 @@
 
 import Foundation
 import UIKit
-public class RingView: UIView {
-    
-    var fillColor = UIColor.yellow.cgColor
-    
+
+public class RingView: GraphicView {
+ 
     public override func draw(_ rect: CGRect) {
         drawRingFittingInsideView()
     }
     
-    internal func drawRingFittingInsideView() -> () {
+    func drawRingFittingInsideView() -> () {
         let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
         let desiredLineWidth:CGFloat = 1 // your desired value
             
@@ -24,23 +23,9 @@ public class RingView: UIView {
             endAngle:CGFloat(Double.pi * 2),
             clockwise: true)
 
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = circlePath.cgPath
-            
-        shapeLayer.fillColor = self.fillColor
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = desiredLineWidth
-    
-        if layer.sublayers == nil || layer.sublayers?.count == 0{
-            layer.addSublayer(shapeLayer)
-        }
-        else{
-            layer.sublayers?[0] = shapeLayer
-        }
-        
+        super.setGraphicPath(cgPath: circlePath.cgPath)
+       
      }
     
-    func setFillColor(color: UIColor){
-        self.fillColor = color.cgColor
-    }
+    
 }
