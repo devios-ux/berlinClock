@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DF43F25E5206400086AFD /* BerlinClock.swift */; };
 		5B1999DE25F5A8FF008FA194 /* GraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1999DD25F5A8FF008FA194 /* GraphicView.swift */; };
+		5B1999F925F5B853008FA194 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1999F825F5B853008FA194 /* LayoutAnchor.swift */; };
 		5B286B0325E6CFA900E455C8 /* BerlinClockConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */; };
 		5B286B1C25E7183200E455C8 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B1B25E7183200E455C8 /* RingView.swift */; };
 		5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B2825E7298500E455C8 /* RectangleView.swift */; };
 		5B286B2E25E7390A00E455C8 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */; };
+		5B50A6A225F6F0810081A0C4 /* BerlinClock2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B50A6A125F6F0810081A0C4 /* BerlinClock2View.swift */; };
 		5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E49FF25E515D500A01DFF /* AppDelegate.swift */; };
 		5B5E4A0225E515D500A01DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */; };
 		5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E4A0325E515D500A01DFF /* ViewController.swift */; };
@@ -44,12 +46,14 @@
 		5B0DF43F25E5206400086AFD /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		5B0DF44425E5420E00086AFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5B1999DD25F5A8FF008FA194 /* GraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicView.swift; sourceTree = "<group>"; };
+		5B1999F825F5B853008FA194 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
 		5B286B0225E6CFA900E455C8 /* BerlinClockConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockConvert.swift; sourceTree = "<group>"; };
 		5B286B1B25E7183200E455C8 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5B286B2825E7298500E455C8 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
 		5B286B3B25E7B05D00E455C8 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		5B286B6125E7B54100E455C8 /* BerlinClock.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BerlinClock.podspec; sourceTree = "<group>"; };
+		5B50A6A125F6F0810081A0C4 /* BerlinClock2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock2View.swift; sourceTree = "<group>"; };
 		5B5E49FC25E515D500A01DFF /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5E49FF25E515D500A01DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5E4A0125E515D500A01DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				5B286B2825E7298500E455C8 /* RectangleView.swift */,
 				5B286B2D25E7390A00E455C8 /* BerlinClockView.swift */,
 				5B1999DD25F5A8FF008FA194 /* GraphicView.swift */,
+				5B1999F825F5B853008FA194 /* LayoutAnchor.swift */,
+				5B50A6A125F6F0810081A0C4 /* BerlinClock2View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,8 +306,10 @@
 			files = (
 				5B0DF44025E5206400086AFD /* BerlinClock.swift in Sources */,
 				5B286B2E25E7390A00E455C8 /* BerlinClockView.swift in Sources */,
+				5B50A6A225F6F0810081A0C4 /* BerlinClock2View.swift in Sources */,
 				5B5E4A0425E515D500A01DFF /* ViewController.swift in Sources */,
 				5B286B0325E6CFA900E455C8 /* BerlinClockConvert.swift in Sources */,
+				5B1999F925F5B853008FA194 /* LayoutAnchor.swift in Sources */,
 				5B286B2925E7298500E455C8 /* RectangleView.swift in Sources */,
 				5B286B1C25E7183200E455C8 /* RingView.swift in Sources */,
 				5B5E4A0025E515D500A01DFF /* AppDelegate.swift in Sources */,

@@ -7,11 +7,8 @@
 import Foundation
 import UIKit
 
-protocol BerlinClockDelegate : AnyObject {
-    func berlinClockDidChanged(_ berlinClockString: String)
-}
 
-public class BerlinClockView : UIView {
+public class BerlinClock2View : UIView {
     
 
     var circle: RingView!
@@ -47,46 +44,32 @@ public class BerlinClockView : UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //createSubViewAutoLayout()
-        createSubviews()
+        createSubViewAutoLayout()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //createSubViewAutoLayout()
-        createSubviews()
+        createSubViewAutoLayout()
     }
     
-    convenience init(){
-        let screenSize: CGRect = UIScreen.main.bounds
-        // get screen width.
-        let screenWidth =  screenSize.width
-        // get screen height.
-        let screenHeight = screenSize.height
-         
-        // the rectangle top left point x axis position.
-        let xPos = 10
-         
-        // the rectangle top left point y axis position.
-        let yPos = 50
-
-        // the rectangle width.
-        let rectWidth = Int(screenWidth) - 2 * xPos
-        // the rectangle height.
-        let rectHeight = Int(screenHeight) - 2 * yPos
-
-        self.init(frame: CGRect(x: xPos, y: yPos, width: rectWidth, height: rectHeight))
-        
-    }
-    
-    /*
     func createSubViewAutoLayout(){
+        
+        var circle = RingView()
+        circle.backgroundColor = UIColor.red
+        circle.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(circle)
+        
+        circle.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+        circle.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        circle.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25, constant: -30).isActive = true
+        circle.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.20, constant: -30).isActive = true
+        
         
         var rect111 = UIView()
         rect111.backgroundColor = UIColor.red
         rect111.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(rect111)
 
-        rect111.topAnchor.constraint(equalTo: self.topAnchor,
+        rect111.topAnchor.constraint(equalTo: circle.bottomAnchor,
                                    constant: 20).isActive = true
         rect111.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
@@ -202,12 +185,212 @@ public class BerlinClockView : UIView {
         rect311.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
   
+        var rect312 = UIView() //RectangleView()
+        rect312.backgroundColor = UIColor.blue
+        rect312.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect312)
         
+        rect312.centerYAnchor.constraint(equalTo: rect311.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect312.leadingAnchor.constraint(equalTo: rect311.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect312.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -10).isActive = true
+        rect312.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        var rect313 = UIView() //RectangleView()
+        rect313.backgroundColor = UIColor.blue
+        rect313.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect313)
+        
+        rect313.centerYAnchor.constraint(equalTo: rect312.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect313.leadingAnchor.constraint(equalTo: rect312.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect313.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect313.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        var rect314 = UIView() //RectangleView()
+        rect314.backgroundColor = UIColor.blue
+        rect314.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect314)
+        
+        rect314.centerYAnchor.constraint(equalTo: rect313.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect314.leadingAnchor.constraint(equalTo: rect313.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect314.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect314.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        var rect315 = UIView() //RectangleView()
+        rect315.backgroundColor = UIColor.blue
+        rect315.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect315)
+        
+        rect315.centerYAnchor.constraint(equalTo: rect314.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect315.leadingAnchor.constraint(equalTo: rect314.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect315.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect315.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        
+        var rect316 = UIView() //RectangleView()
+        rect316.backgroundColor = UIColor.blue
+        rect316.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect316)
+        
+        rect316.centerYAnchor.constraint(equalTo: rect315.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect316.leadingAnchor.constraint(equalTo: rect315.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect316.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect316.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        
+        
+        var rect317 = UIView() //RectangleView()
+        rect317.backgroundColor = UIColor.blue
+        rect317.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect317)
+        
+        rect317.centerYAnchor.constraint(equalTo: rect316.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect317.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect317.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect317.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        
+        var rect318 = UIView() //RectangleView()
+        rect318.backgroundColor = UIColor.blue
+        rect318.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect318)
+        
+        rect318.centerYAnchor.constraint(equalTo: rect317.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect318.leadingAnchor.constraint(equalTo: rect317.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect318.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect318.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        
+        var rect319 = UIView() //RectangleView()
+        rect319.backgroundColor = UIColor.blue
+        rect319.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect319)
+        
+        rect319.centerYAnchor.constraint(equalTo: rect318.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect319.leadingAnchor.constraint(equalTo: rect318.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect319.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect319.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        var rect3110 = UIView() //RectangleView()
+        rect3110.backgroundColor = UIColor.blue
+        rect3110.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect3110)
+        
+        rect3110.centerYAnchor.constraint(equalTo: rect319.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect3110.leadingAnchor.constraint(equalTo: rect319.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect3110.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.1, constant: -30).isActive = true
+        rect3110.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+        
+        var rect3111 = UIView() //RectangleView()
+        rect3111.backgroundColor = UIColor.blue
+        rect3111.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect3111)
+        
+        rect3111.centerYAnchor.constraint(equalTo: rect3110.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect3111.leadingAnchor.constraint(equalTo: rect3110.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect3111.widthAnchor.constraint(equalTo: rect3110.widthAnchor).isActive = true
+        rect3111.heightAnchor.constraint(equalTo: rect3110.heightAnchor).isActive = true
+        //rect3111.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+    
+        
+        var rect411 = UIView()
+        rect411.backgroundColor = UIColor.red
+        rect411.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect411)
+
+        rect411.topAnchor.constraint(equalTo: rect311.bottomAnchor,
+                                   constant: 20).isActive = true
+        rect411.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                       constant: 20).isActive = true
+        
+        rect411.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                     multiplier: 0.25, constant: -30).isActive = true
+        rect411.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                      multiplier: 0.20, constant: -30).isActive = true
+
+        
+        var rect412 = UIView() //RectangleView()
+        rect412.backgroundColor = UIColor.blue
+        rect412.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect412)
+        
+        rect412.centerYAnchor.constraint(equalTo: rect411.centerYAnchor).isActive = true
+        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect412.leadingAnchor.constraint(equalTo: rect411.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect412.widthAnchor.constraint(equalTo: self.widthAnchor,
+                                       multiplier: 0.25, constant: -30).isActive = true
+        rect412.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                        multiplier: 0.20, constant: -30).isActive = true
+    
+        var rect413 = UIView() //RectangleView()
+        rect413.backgroundColor = UIColor.blue
+        rect413.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect413)
+        
+        rect413.centerYAnchor.constraint(equalTo: rect412.centerYAnchor).isActive = true
+        rect413.leadingAnchor.constraint(equalTo: rect412.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect413.widthAnchor.constraint(equalTo: rect412.widthAnchor).isActive = true
+        rect413.heightAnchor.constraint(equalTo: rect412.heightAnchor).isActive = true
+        
+        var rect414 = UIView() //RectangleView()
+        rect414.backgroundColor = UIColor.blue
+        rect414.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect414)
+        
+        rect414.centerYAnchor.constraint(equalTo: rect413.centerYAnchor).isActive = true
+        rect414.leadingAnchor.constraint(equalTo: rect413.trailingAnchor,
+                                       constant: 20).isActive = true
+        rect414.widthAnchor.constraint(equalTo: rect413.widthAnchor).isActive = true
+        rect414.heightAnchor.constraint(equalTo: rect413.heightAnchor).isActive = true
         
         
     }
     
-    */
+    
     
    func createSubviews() {
     
