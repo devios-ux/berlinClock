@@ -98,8 +98,8 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect113)
         
         rect113.centerYAnchor.constraint(equalTo: rect112.centerYAnchor).isActive = true
-        rect113.leadingAnchor.constraint(equalTo: rect112.trailingAnchor,
-                                       constant: 20).isActive = true
+        //rect113.leadingAnchor.constraint(equalTo: rect112.trailingAnchor,constant: 20).isActive = true
+        
         rect113.widthAnchor.constraint(equalTo: rect112.widthAnchor).isActive = true
         rect113.heightAnchor.constraint(equalTo: rect112.heightAnchor).isActive = true
         
@@ -112,8 +112,11 @@ public class BerlinClock2View : UIView {
         rect114.leadingAnchor.constraint(equalTo: rect113.trailingAnchor,
                                        constant: 20).isActive = true
         rect114.widthAnchor.constraint(equalTo: rect113.widthAnchor).isActive = true
-        rect114.heightAnchor.constraint(equalTo: rect113.heightAnchor).isActive = true
         
+        rect114.heightAnchor.constraint(equalTo: rect113.heightAnchor).isActive = true
+        rect114.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        
+        rect113.trailingAnchor.constraint(equalTo: rect114.leadingAnchor, constant: -20)
         
         // bottom hour
         var rect211 = UIView()
@@ -163,12 +166,18 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect214)
         
         rect214.centerYAnchor.constraint(equalTo: rect213.centerYAnchor).isActive = true
-        rect214.leadingAnchor.constraint(equalTo: rect213.trailingAnchor,
-                                       constant: 20).isActive = true
+        rect214.leadingAnchor.constraint(equalTo: rect213.trailingAnchor,constant: 20).isActive = true
         rect214.widthAnchor.constraint(equalTo: rect213.widthAnchor).isActive = true
         rect214.heightAnchor.constraint(equalTo: rect213.heightAnchor).isActive = true
+        rect214.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        
+        rect213.trailingAnchor.constraint(equalTo: rect214.leadingAnchor, constant: -20).isActive = true
         
         // second part
+        let constantWith = CGFloat(-30)
+        let multiplier11 = CGFloat(0.1)
+        let leadingspace = CGFloat( 20 /*20*/)
+        let trailingspace = CGFloat(-20)
         
         var rect311 = UIView()
         rect311.backgroundColor = UIColor.red
@@ -180,8 +189,9 @@ public class BerlinClock2View : UIView {
         rect311.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
         
-        rect311.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+        
+        rect311.widthAnchor.constraint(greaterThanOrEqualTo: self.widthAnchor,
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect311.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
   
@@ -191,11 +201,10 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect312)
         
         rect312.centerYAnchor.constraint(equalTo: rect311.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect312.leadingAnchor.constraint(equalTo: rect311.trailingAnchor,
-                                       constant: 20).isActive = true
+                                       constant: leadingspace).isActive = true
         rect312.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -10).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect312.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
@@ -207,9 +216,9 @@ public class BerlinClock2View : UIView {
         rect313.centerYAnchor.constraint(equalTo: rect312.centerYAnchor).isActive = true
         //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect313.leadingAnchor.constraint(equalTo: rect312.trailingAnchor,
-                                       constant: 20).isActive = true
+                                       constant: leadingspace).isActive = true
         rect313.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect313.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
@@ -220,11 +229,10 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect314)
         
         rect314.centerYAnchor.constraint(equalTo: rect313.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect314.leadingAnchor.constraint(equalTo: rect313.trailingAnchor,
-                                       constant: 20).isActive = true
+                                       constant: leadingspace).isActive = true
         rect314.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect314.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
@@ -235,11 +243,10 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect315)
         
         rect315.centerYAnchor.constraint(equalTo: rect314.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect315.leadingAnchor.constraint(equalTo: rect314.trailingAnchor,
-                                       constant: 20).isActive = true
+                                       constant: leadingspace).isActive = true
         rect315.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect315.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
@@ -251,15 +258,11 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect316)
         
         rect316.centerYAnchor.constraint(equalTo: rect315.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect316.leadingAnchor.constraint(equalTo: rect315.trailingAnchor,
-                                       constant: 20).isActive = true
-        rect316.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
-        rect316.heightAnchor.constraint(equalTo: self.heightAnchor,
-                                        multiplier: 0.20, constant: -30).isActive = true
+        rect316.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        
+        //rect316.leadingAnchor.constraint(equalTo: rect315.trailingAnchor,constant: 20).isActive = true
+        rect316.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
+        rect316.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
         
         
         var rect317 = UIView() //RectangleView()
@@ -268,14 +271,11 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect317)
         
         rect317.centerYAnchor.constraint(equalTo: rect316.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect317.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,
-                                       constant: 20).isActive = true
+        //rect317.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,constant: 20).isActive = true
         rect317.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect317.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
-        
         
         
         var rect318 = UIView() //RectangleView()
@@ -284,14 +284,13 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect318)
         
         rect318.centerYAnchor.constraint(equalTo: rect317.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect318.leadingAnchor.constraint(equalTo: rect317.trailingAnchor,
-                                       constant: 20).isActive = true
+        //rect318.leadingAnchor.constraint(equalTo: rect317.trailingAnchor,constant: 20).isActive = true
         rect318.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect318.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
-        
+        rect317.trailingAnchor.constraint(equalTo: rect318.leadingAnchor, constant: trailingspace).isActive = true
+       
         
         var rect319 = UIView() //RectangleView()
         rect319.backgroundColor = UIColor.blue
@@ -299,13 +298,11 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect319)
         
         rect319.centerYAnchor.constraint(equalTo: rect318.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect319.leadingAnchor.constraint(equalTo: rect318.trailingAnchor,
-                                       constant: 20).isActive = true
-        rect319.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
-        rect319.heightAnchor.constraint(equalTo: self.heightAnchor,
-                                        multiplier: 0.20, constant: -30).isActive = true
+        //rect319.leadingAnchor.constraint(equalTo: rect318.trailingAnchor,constant: 20).isActive = true
+        rect319.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
+        rect319.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
+        rect318.trailingAnchor.constraint(equalTo: rect319.leadingAnchor, constant: trailingspace).isActive = true
+
         
         var rect3110 = UIView() //RectangleView()
         rect3110.backgroundColor = UIColor.blue
@@ -313,13 +310,13 @@ public class BerlinClock2View : UIView {
         self.addSubview(rect3110)
         
         rect3110.centerYAnchor.constraint(equalTo: rect319.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect3110.leadingAnchor.constraint(equalTo: rect319.trailingAnchor,
-                                       constant: 20).isActive = true
+        //rect3110.leadingAnchor.constraint(equalTo: rect319.trailingAnchor,constant: 20).isActive = true
         rect3110.widthAnchor.constraint(equalTo: self.widthAnchor,
-                                       multiplier: 0.1, constant: -30).isActive = true
+                                       multiplier: multiplier11, constant: constantWith).isActive = true
         rect3110.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
+        
+        rect319.trailingAnchor.constraint(equalTo: rect3110.leadingAnchor, constant: trailingspace).isActive = true
         
         var rect3111 = UIView() //RectangleView()
         rect3111.backgroundColor = UIColor.blue
@@ -332,8 +329,8 @@ public class BerlinClock2View : UIView {
                                        constant: 20).isActive = true
         rect3111.widthAnchor.constraint(equalTo: rect3110.widthAnchor).isActive = true
         rect3111.heightAnchor.constraint(equalTo: rect3110.heightAnchor).isActive = true
-        //rect3111.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
-    
+        rect3111.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingspace).isActive = true
+        rect3110.trailingAnchor.constraint(equalTo: rect3111.leadingAnchor, constant: trailingspace).isActive = true
         
         var rect411 = UIView()
         rect411.backgroundColor = UIColor.red
@@ -387,6 +384,8 @@ public class BerlinClock2View : UIView {
         rect414.widthAnchor.constraint(equalTo: rect413.widthAnchor).isActive = true
         rect414.heightAnchor.constraint(equalTo: rect413.heightAnchor).isActive = true
         
+        rect414.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        rect413.trailingAnchor.constraint(equalTo: rect414.leadingAnchor, constant: -20).isActive = true
         
     }
     
