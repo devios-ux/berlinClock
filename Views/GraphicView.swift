@@ -20,7 +20,7 @@ public class GraphicView  : UIView{
         initLayer()
     }
     required init?(coder aDecoder: NSCoder) {
-           super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
         initLayer()
     }
     
@@ -42,7 +42,9 @@ public class GraphicView  : UIView{
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = fillColor
         shapeLayer.lineWidth = desiredLineWidth
-
+        
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
         self.layer.addSublayer(shapeLayer)
     }
     

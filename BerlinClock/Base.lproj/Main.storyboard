@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX0-gh-VAJ" customClass="BerlinClock2View" customModule="BerlinClock" customModuleProvider="target">
-                                <rect key="frame" x="45" y="86" width="335" height="702"/>
+                                <rect key="frame" x="20" y="84" width="374" height="758"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SX0-gh-VAJ" secondAttribute="trailing" constant="34" id="PfO-sG-CpT"/>
-                            <constraint firstItem="SX0-gh-VAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="UCU-h5-Efw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SX0-gh-VAJ" secondAttribute="bottom" constant="74" id="ag0-EV-St1"/>
-                            <constraint firstItem="SX0-gh-VAJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="dmu-3D-0db"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SX0-gh-VAJ" secondAttribute="trailing" constant="20" id="PfO-sG-CpT"/>
+                            <constraint firstItem="SX0-gh-VAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UCU-h5-Efw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SX0-gh-VAJ" secondAttribute="bottom" constant="20" id="ag0-EV-St1"/>
+                            <constraint firstItem="SX0-gh-VAJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="dmu-3D-0db"/>
                         </constraints>
                     </view>
                 </viewController>
