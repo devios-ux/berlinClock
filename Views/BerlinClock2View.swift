@@ -12,33 +12,33 @@ public class BerlinClock2View : UIView {
     
 
     var circle: RingView!
-    var rect11: RectangleView!
-    var rect12: RectangleView!
-    var rect13: RectangleView!
-    var rect14: RectangleView!
+    var rect11: GraphicView!
+    var rect12: GraphicView!
+    var rect13: GraphicView!
+    var rect14: GraphicView!
     
-    var rect21: RectangleView!
-    var rect22: RectangleView!
-    var rect23: RectangleView!
-    var rect24: RectangleView!
+    var rect21: GraphicView!
+    var rect22: GraphicView!
+    var rect23: GraphicView!
+    var rect24: GraphicView!
    
-    var rect31: RectangleView!
-    var rect32: RectangleView!
-    var rect33: RectangleView!
-    var rect34: RectangleView!
-    var rect35: RectangleView!
-    var rect36: RectangleView!
-    var rect37: RectangleView!
-    var rect38: RectangleView!
-    var rect39: RectangleView!
-    var rect310: RectangleView!
-    var rect311: RectangleView!
+    var rect31: GraphicView!
+    var rect32: GraphicView!
+    var rect33: GraphicView!
+    var rect34: GraphicView!
+    var rect35: GraphicView!
+    var rect36: GraphicView!
+    var rect37: GraphicView!
+    var rect38: GraphicView!
+    var rect39: GraphicView!
+    var rect310: GraphicView!
+    var rect311: GraphicView!
   
     
-    var rect41: RectangleView!
-    var rect42: RectangleView!
-    var rect43: RectangleView!
-    var rect44: RectangleView!
+    var rect41: GraphicView!
+    var rect42: GraphicView!
+    var rect43: GraphicView!
+    var rect44: GraphicView!
     
     var delegate: BerlinClockDelegate?
 
@@ -64,114 +64,114 @@ public class BerlinClock2View : UIView {
         circle.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.20, constant: -30).isActive = true
         
         
-        let rect111 = GraphicView()
-        rect111.backgroundColor = UIColor.red
-        rect111.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect111)
+        rect11 = GraphicView()
+        rect11.backgroundColor = UIColor.red
+        rect11.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect11)
 
-        rect111.topAnchor.constraint(equalTo: circle.bottomAnchor,
+        rect11.topAnchor.constraint(equalTo: circle.bottomAnchor,
                                    constant: 20).isActive = true
-        rect111.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+        rect11.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
         
-        rect111.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect11.widthAnchor.constraint(equalTo: self.widthAnchor,
                                      multiplier: 0.25, constant: -30).isActive = true
-        rect111.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect11.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
         
-        let rect112 = GraphicView() //RectangleView()
-        rect112.backgroundColor = UIColor.blue
-        rect112.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect112)
+        rect12 = GraphicView() //RectangleView()
+        rect12.backgroundColor = UIColor.blue
+        rect12.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect12)
         
-        rect112.centerYAnchor.constraint(equalTo: rect111.centerYAnchor).isActive = true
-        rect112.leadingAnchor.constraint(equalTo: rect111.trailingAnchor,
+        rect12.centerYAnchor.constraint(equalTo: rect11.centerYAnchor).isActive = true
+        rect12.leadingAnchor.constraint(equalTo: rect11.trailingAnchor,
                                        constant: 20).isActive = true
-        rect112.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect12.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: 0.25, constant: -30).isActive = true
-        rect112.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect12.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        var rect113 = GraphicView() //RectangleView()
-        rect113.backgroundColor = UIColor.blue
-        rect113.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect113)
+        rect13 = GraphicView() //RectangleView()
+        rect13.backgroundColor = UIColor.blue
+        rect13.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect13)
         
-        rect113.centerYAnchor.constraint(equalTo: rect112.centerYAnchor).isActive = true
+        rect13.centerYAnchor.constraint(equalTo: rect12.centerYAnchor).isActive = true
         //rect113.leadingAnchor.constraint(equalTo: rect112.trailingAnchor,constant: 20).isActive = true
         
-        rect113.widthAnchor.constraint(equalTo: rect112.widthAnchor).isActive = true
-        rect113.heightAnchor.constraint(equalTo: rect112.heightAnchor).isActive = true
+        rect13.widthAnchor.constraint(equalTo: rect12.widthAnchor).isActive = true
+        rect13.heightAnchor.constraint(equalTo: rect12.heightAnchor).isActive = true
         
-        var rect114 = GraphicView() //RectangleView()
-        rect114.backgroundColor = UIColor.blue
-        rect114.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect114)
+        rect14 = GraphicView() //RectangleView()
+        rect14.backgroundColor = UIColor.blue
+        rect14.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect14)
         
-        rect114.centerYAnchor.constraint(equalTo: rect113.centerYAnchor).isActive = true
-        rect114.leadingAnchor.constraint(equalTo: rect113.trailingAnchor,
+        rect14.centerYAnchor.constraint(equalTo: rect13.centerYAnchor).isActive = true
+        rect14.leadingAnchor.constraint(equalTo: rect13.trailingAnchor,
                                        constant: 20).isActive = true
-        rect114.widthAnchor.constraint(equalTo: rect113.widthAnchor).isActive = true
+        rect14.widthAnchor.constraint(equalTo: rect13.widthAnchor).isActive = true
         
-        rect114.heightAnchor.constraint(equalTo: rect113.heightAnchor).isActive = true
-        rect114.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        rect14.heightAnchor.constraint(equalTo: rect13.heightAnchor).isActive = true
+        rect14.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
-        rect113.trailingAnchor.constraint(equalTo: rect114.leadingAnchor, constant: -20)
+        rect13.trailingAnchor.constraint(equalTo: rect14.leadingAnchor, constant: -20)
         
         // bottom hour
-        var rect211 = GraphicView()
-        rect211.backgroundColor = UIColor.red
-        rect211.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect211)
+        rect21 = GraphicView()
+        rect21.backgroundColor = UIColor.red
+        rect21.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect21)
 
-        rect211.topAnchor.constraint(equalTo: rect111.bottomAnchor,
+        rect21.topAnchor.constraint(equalTo: rect11.bottomAnchor,
                                    constant: 20).isActive = true
-        rect211.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+        rect21.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
         
-        rect211.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect21.widthAnchor.constraint(equalTo: self.widthAnchor,
                                      multiplier: 0.25, constant: -30).isActive = true
-        rect211.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect21.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
 
         
-        var rect212 = GraphicView() //RectangleView()
-        rect212.backgroundColor = UIColor.blue
-        rect212.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect212)
+        rect22 = GraphicView() //RectangleView()
+        rect22.backgroundColor = UIColor.blue
+        rect22.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect22)
         
-        rect212.centerYAnchor.constraint(equalTo: rect211.centerYAnchor).isActive = true
+        rect22.centerYAnchor.constraint(equalTo: rect21.centerYAnchor).isActive = true
         //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect212.leadingAnchor.constraint(equalTo: rect211.trailingAnchor,
+        rect22.leadingAnchor.constraint(equalTo: rect21.trailingAnchor,
                                        constant: 20).isActive = true
-        rect212.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect22.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: 0.25, constant: -30).isActive = true
-        rect212.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect22.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        var rect213 = GraphicView() //RectangleView()
-        rect213.backgroundColor = UIColor.blue
-        rect213.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect213)
+        rect23 = GraphicView() //RectangleView()
+        rect23.backgroundColor = UIColor.blue
+        rect23.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect23)
         
-        rect213.centerYAnchor.constraint(equalTo: rect212.centerYAnchor).isActive = true
-        rect213.leadingAnchor.constraint(equalTo: rect212.trailingAnchor,
+        rect23.centerYAnchor.constraint(equalTo: rect22.centerYAnchor).isActive = true
+        rect23.leadingAnchor.constraint(equalTo: rect22.trailingAnchor,
                                        constant: 20).isActive = true
-        rect213.widthAnchor.constraint(equalTo: rect212.widthAnchor).isActive = true
-        rect213.heightAnchor.constraint(equalTo: rect212.heightAnchor).isActive = true
+        rect23.widthAnchor.constraint(equalTo: rect22.widthAnchor).isActive = true
+        rect23.heightAnchor.constraint(equalTo: rect22.heightAnchor).isActive = true
         
-        var rect214 = GraphicView() //RectangleView()
-        rect214.backgroundColor = UIColor.blue
-        rect214.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect214)
+        rect24 = GraphicView() //RectangleView()
+        rect24.backgroundColor = UIColor.blue
+        rect24.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect24)
         
-        rect214.centerYAnchor.constraint(equalTo: rect213.centerYAnchor).isActive = true
-        rect214.leadingAnchor.constraint(equalTo: rect213.trailingAnchor,constant: 20).isActive = true
-        rect214.widthAnchor.constraint(equalTo: rect213.widthAnchor).isActive = true
-        rect214.heightAnchor.constraint(equalTo: rect213.heightAnchor).isActive = true
-        rect214.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        rect24.centerYAnchor.constraint(equalTo: rect23.centerYAnchor).isActive = true
+        rect24.leadingAnchor.constraint(equalTo: rect23.trailingAnchor,constant: 20).isActive = true
+        rect24.widthAnchor.constraint(equalTo: rect23.widthAnchor).isActive = true
+        rect24.heightAnchor.constraint(equalTo: rect23.heightAnchor).isActive = true
+        rect24.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
-        rect213.trailingAnchor.constraint(equalTo: rect214.leadingAnchor, constant: -20).isActive = true
+        rect23.trailingAnchor.constraint(equalTo: rect24.leadingAnchor, constant: -20).isActive = true
         
         // second part
         let constantWith = CGFloat(-20/*-30*/)
@@ -180,12 +180,12 @@ public class BerlinClock2View : UIView {
         let trailingspace = CGFloat(-10)
         let trailingspaceParent = CGFloat(-20)
         
-        let rect311 = GraphicView()
+        rect311 = GraphicView()
         rect311.backgroundColor = UIColor.red
         rect311.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(rect311)
 
-        rect311.topAnchor.constraint(equalTo: rect211.bottomAnchor,
+        rect311.topAnchor.constraint(equalTo: rect21.bottomAnchor,
                                    constant: 20).isActive = true
         rect311.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
@@ -196,197 +196,197 @@ public class BerlinClock2View : UIView {
         rect311.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
   
-        let rect312 = GraphicView() //RectangleView()
-        rect312.backgroundColor = UIColor.blue
-        rect312.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect312)
+        rect32 = GraphicView() //RectangleView()
+        rect32.backgroundColor = UIColor.blue
+        rect32.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect32)
         
-        rect312.centerYAnchor.constraint(equalTo: rect311.centerYAnchor).isActive = true
-        rect312.leadingAnchor.constraint(equalTo: rect311.trailingAnchor,
+        rect32.centerYAnchor.constraint(equalTo: rect311.centerYAnchor).isActive = true
+        rect32.leadingAnchor.constraint(equalTo: rect311.trailingAnchor,
                                        constant: leadingspace).isActive = true
-        rect312.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect32.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect312.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect32.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        let rect313 = GraphicView() //RectangleView()
-        rect313.backgroundColor = UIColor.blue
-        rect313.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect313)
+        rect33 = GraphicView() //RectangleView()
+        rect33.backgroundColor = UIColor.blue
+        rect33.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect33)
         
-        rect313.centerYAnchor.constraint(equalTo: rect312.centerYAnchor).isActive = true
+        rect33.centerYAnchor.constraint(equalTo: rect32.centerYAnchor).isActive = true
         //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect313.leadingAnchor.constraint(equalTo: rect312.trailingAnchor,
+        rect33.leadingAnchor.constraint(equalTo: rect32.trailingAnchor,
                                        constant: leadingspace).isActive = true
-        rect313.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect33.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect313.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect33.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
         
-        let rect314 = GraphicView() //RectangleView()
-        rect314.backgroundColor = UIColor.blue
-        rect314.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect314)
+        rect34 = GraphicView() //RectangleView()
+        rect34.backgroundColor = UIColor.blue
+        rect34.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect34)
         
-        rect314.centerYAnchor.constraint(equalTo: rect313.centerYAnchor).isActive = true
-        rect314.leadingAnchor.constraint(equalTo: rect313.trailingAnchor,
+        rect34.centerYAnchor.constraint(equalTo: rect33.centerYAnchor).isActive = true
+        rect34.leadingAnchor.constraint(equalTo: rect33.trailingAnchor,
                                        constant: leadingspace).isActive = true
-        rect314.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect34.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect314.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect34.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
         
-        let rect315 = GraphicView() //RectangleView()
-        rect315.backgroundColor = UIColor.blue
-        rect315.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect315)
+        rect35 = GraphicView() //RectangleView()
+        rect35.backgroundColor = UIColor.blue
+        rect35.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect35)
         
-        rect315.centerYAnchor.constraint(equalTo: rect314.centerYAnchor).isActive = true
-        rect315.leadingAnchor.constraint(equalTo: rect314.trailingAnchor,
+        rect35.centerYAnchor.constraint(equalTo: rect34.centerYAnchor).isActive = true
+        rect35.leadingAnchor.constraint(equalTo: rect34.trailingAnchor,
                                        constant: leadingspace).isActive = true
-        rect315.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect35.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect315.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect35.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
         
         
-        let rect316 = GraphicView() //RectangleView()
-        rect316.backgroundColor = UIColor.blue
-        rect316.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect316)
+        rect36 = GraphicView() //RectangleView()
+        rect36.backgroundColor = UIColor.blue
+        rect36.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect36)
         
-        rect316.centerYAnchor.constraint(equalTo: rect315.centerYAnchor).isActive = true
-        rect316.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        rect36.centerYAnchor.constraint(equalTo: rect35.centerYAnchor).isActive = true
+        rect36.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        //rect316.leadingAnchor.constraint(equalTo: rect315.trailingAnchor,constant: 20).isActive = true
-        rect316.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
-        rect316.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
+        //rect316.leadingAnchor.constraint(equalTo: rect35.trailingAnchor,constant: 20).isActive = true
+        rect36.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
+        rect36.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
         
         
-        let rect317 = GraphicView() //RectangleView()
-        rect317.backgroundColor = UIColor.blue
-        rect317.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect317)
+        rect37 = GraphicView() //RectangleView()
+        rect37.backgroundColor = UIColor.blue
+        rect37.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect37)
         
-        rect317.centerYAnchor.constraint(equalTo: rect316.centerYAnchor).isActive = true
-        //rect317.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,constant: 20).isActive = true
-        rect317.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect37.centerYAnchor.constraint(equalTo: rect36.centerYAnchor).isActive = true
+        //rect37.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,constant: 20).isActive = true
+        rect37.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect317.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect37.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
         
-        let rect318 = GraphicView() //RectangleView()
-        rect318.backgroundColor = UIColor.blue
-        rect318.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect318)
+        rect38 = GraphicView() //RectangleView()
+        rect38.backgroundColor = UIColor.blue
+        rect38.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect38)
         
-        rect318.centerYAnchor.constraint(equalTo: rect317.centerYAnchor).isActive = true
-        //rect318.leadingAnchor.constraint(equalTo: rect317.trailingAnchor,constant: 20).isActive = true
-        rect318.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect38.centerYAnchor.constraint(equalTo: rect37.centerYAnchor).isActive = true
+        //rect38.leadingAnchor.constraint(equalTo: rect37.trailingAnchor,constant: 20).isActive = true
+        rect38.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect318.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect38.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
-        rect317.trailingAnchor.constraint(equalTo: rect318.leadingAnchor, constant: trailingspace).isActive = true
+        rect37.trailingAnchor.constraint(equalTo: rect38.leadingAnchor, constant: trailingspace).isActive = true
        
         
-        let rect319 = GraphicView() //RectangleView()
-        rect319.backgroundColor = UIColor.blue
-        rect319.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect319)
+        rect39 = GraphicView() //RectangleView()
+        rect39.backgroundColor = UIColor.blue
+        rect39.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect39)
         
-        rect319.centerYAnchor.constraint(equalTo: rect318.centerYAnchor).isActive = true
-        //rect319.leadingAnchor.constraint(equalTo: rect318.trailingAnchor,constant: 20).isActive = true
-        rect319.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
-        rect319.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
-        rect318.trailingAnchor.constraint(equalTo: rect319.leadingAnchor, constant: trailingspace).isActive = true
+        rect39.centerYAnchor.constraint(equalTo: rect38.centerYAnchor).isActive = true
+        //rect39.leadingAnchor.constraint(equalTo: rect38.trailingAnchor,constant: 20).isActive = true
+        rect39.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
+        rect39.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
+        rect38.trailingAnchor.constraint(equalTo: rect39.leadingAnchor, constant: trailingspace).isActive = true
 
         
-        let rect3110 = GraphicView() //RectangleView()
-        rect3110.backgroundColor = UIColor.blue
-        rect3110.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect3110)
+        rect310 = GraphicView() //RectangleView()
+        rect310.backgroundColor = UIColor.blue
+        rect310.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect310)
         
-        rect3110.centerYAnchor.constraint(equalTo: rect319.centerYAnchor).isActive = true
-        //rect3110.leadingAnchor.constraint(equalTo: rect319.trailingAnchor,constant: 20).isActive = true
-        rect3110.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect310.centerYAnchor.constraint(equalTo: rect39.centerYAnchor).isActive = true
+        //rect310.leadingAnchor.constraint(equalTo: rect39.trailingAnchor,constant: 20).isActive = true
+        rect310.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
-        rect3110.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect310.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        rect319.trailingAnchor.constraint(equalTo: rect3110.leadingAnchor, constant: trailingspace).isActive = true
+        rect39.trailingAnchor.constraint(equalTo: rect310.leadingAnchor, constant: trailingspace).isActive = true
         
-        var rect3111 = GraphicView() //RectangleView()
-        rect3111.backgroundColor = UIColor.blue
-        rect3111.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect3111)
+        var rect311 = GraphicView() //RectangleView()
+        rect311.backgroundColor = UIColor.blue
+        rect311.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect311)
         
-        rect3111.centerYAnchor.constraint(equalTo: rect3110.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect3111.leadingAnchor.constraint(equalTo: rect3110.trailingAnchor,
+        rect311.centerYAnchor.constraint(equalTo: rect310.centerYAnchor).isActive = true
+        //rect12.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
+        rect311.leadingAnchor.constraint(equalTo: rect310.trailingAnchor,
                                        constant: 20).isActive = true
-        rect3111.widthAnchor.constraint(equalTo: rect3110.widthAnchor).isActive = true
-        rect3111.heightAnchor.constraint(equalTo: rect3110.heightAnchor).isActive = true
-        rect3111.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingspaceParent).isActive = true
-        rect3110.trailingAnchor.constraint(equalTo: rect3111.leadingAnchor, constant: trailingspace).isActive = true
+        rect311.widthAnchor.constraint(equalTo: rect310.widthAnchor).isActive = true
+        rect311.heightAnchor.constraint(equalTo: rect310.heightAnchor).isActive = true
+        rect311.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingspaceParent).isActive = true
+        rect310.trailingAnchor.constraint(equalTo: rect311.leadingAnchor, constant: trailingspace).isActive = true
         
-        var rect411 = GraphicView()
-        rect411.backgroundColor = UIColor.red
-        rect411.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect411)
+        rect41 = GraphicView()
+        rect41.backgroundColor = UIColor.red
+        rect41.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect41)
 
-        rect411.topAnchor.constraint(equalTo: rect311.bottomAnchor,
+        rect41.topAnchor.constraint(equalTo: rect311.bottomAnchor,
                                    constant: 20).isActive = true
-        rect411.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+        rect41.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
         
-        rect411.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect41.widthAnchor.constraint(equalTo: self.widthAnchor,
                                      multiplier: 0.25, constant: -30).isActive = true
-        rect411.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect41.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
 
         
-        var rect412 = GraphicView() //RectangleView()
-        rect412.backgroundColor = UIColor.blue
-        rect412.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect412)
+        rect42 = GraphicView() //RectangleView()
+        rect42.backgroundColor = UIColor.blue
+        rect42.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect42)
         
-        rect412.centerYAnchor.constraint(equalTo: rect411.centerYAnchor).isActive = true
+        rect42.centerYAnchor.constraint(equalTo: rect41.centerYAnchor).isActive = true
         //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
-        rect412.leadingAnchor.constraint(equalTo: rect411.trailingAnchor,
+        rect42.leadingAnchor.constraint(equalTo: rect41.trailingAnchor,
                                        constant: 20).isActive = true
-        rect412.widthAnchor.constraint(equalTo: self.widthAnchor,
+        rect42.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: 0.25, constant: -30).isActive = true
-        rect412.heightAnchor.constraint(equalTo: self.heightAnchor,
+        rect42.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        var rect413 = GraphicView() //RectangleView()
-        rect413.backgroundColor = UIColor.blue
-        rect413.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect413)
+        rect43 = GraphicView() //RectangleView()
+        rect43.backgroundColor = UIColor.blue
+        rect43.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect43)
         
-        rect413.centerYAnchor.constraint(equalTo: rect412.centerYAnchor).isActive = true
-        rect413.leadingAnchor.constraint(equalTo: rect412.trailingAnchor,
+        rect43.centerYAnchor.constraint(equalTo: rect42.centerYAnchor).isActive = true
+        rect43.leadingAnchor.constraint(equalTo: rect42.trailingAnchor,
                                        constant: 20).isActive = true
-        rect413.widthAnchor.constraint(equalTo: rect412.widthAnchor).isActive = true
-        rect413.heightAnchor.constraint(equalTo: rect412.heightAnchor).isActive = true
+        rect43.widthAnchor.constraint(equalTo: rect42.widthAnchor).isActive = true
+        rect43.heightAnchor.constraint(equalTo: rect42.heightAnchor).isActive = true
         
-        var rect414 = GraphicView() //RectangleView()
-        rect414.backgroundColor = UIColor.blue
-        rect414.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(rect414)
+        rect44 = GraphicView() //RectangleView()
+        rect44.backgroundColor = UIColor.blue
+        rect44.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rect44)
         
-        rect414.centerYAnchor.constraint(equalTo: rect413.centerYAnchor).isActive = true
-        rect414.leadingAnchor.constraint(equalTo: rect413.trailingAnchor,
+        rect44.centerYAnchor.constraint(equalTo: rect43.centerYAnchor).isActive = true
+        rect44.leadingAnchor.constraint(equalTo: rect43.trailingAnchor,
                                        constant: 20).isActive = true
-        rect414.widthAnchor.constraint(equalTo: rect413.widthAnchor).isActive = true
-        rect414.heightAnchor.constraint(equalTo: rect413.heightAnchor).isActive = true
+        rect44.widthAnchor.constraint(equalTo: rect43.widthAnchor).isActive = true
+        rect44.heightAnchor.constraint(equalTo: rect43.heightAnchor).isActive = true
         
-        rect414.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
-        rect413.trailingAnchor.constraint(equalTo: rect414.leadingAnchor, constant: -20).isActive = true
+        rect44.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+        rect43.trailingAnchor.constraint(equalTo: rect44.leadingAnchor, constant: -20).isActive = true
         
     }
     
