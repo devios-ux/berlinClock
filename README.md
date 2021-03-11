@@ -44,5 +44,9 @@ In the viewDidLoad method of your ViewController, add these two instructions aft
 self.berlinClockView = BerlinClockView()
 self.view.addSubview(self.berlinClockView)
 ```
-
 That's it ! 
+
+#Release 1.0.4:
+
+- version with autolayout
+
