@@ -29,24 +29,11 @@ source 'https://github.com/devios-ux/CocoaPods-Specs.git'
 pod 'BerlinClock'
 ```
 
-In your ViewController, import the framework :
-```swift
-import BerlinClock
-```
-After that, declare the data member of your ViewController like :
+## Release 1.0.4:
 
-```swift
-var berlinClockView: BerlinClockView!
-```
+- Version with autolayout 
+- support landscape mode
+- works with StoryBoard
 
-In the viewDidLoad method of your ViewController, add these two instructions after the super.viewDidLoad() :
-```swift
-self.berlinClockView = BerlinClockView()
-self.view.addSubview(self.berlinClockView)
-```
 That's it ! 
-
-#Release 1.0.4:
-
-- version with autolayout
 
