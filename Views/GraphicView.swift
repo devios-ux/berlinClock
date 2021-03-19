@@ -38,14 +38,11 @@ public class GraphicView  : UIView{
     }
     
     func initLayer(){
-        
         // configure autolayout
         self.translatesAutoresizingMaskIntoConstraints = false
-        
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = fillColor
         shapeLayer.lineWidth = desiredLineWidth
-        
         //self.layer.borderColor = UIColor.black.cgColor
         //self.layer.borderWidth = 1
         self.layer.addSublayer(shapeLayer)

@@ -14,7 +14,7 @@ public class RingView: GraphicView {
     
     func drawRingFittingInsideView() -> () {
         let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
-        let xHalfSize:CGFloat = bounds.size.width/2 //min( bounds.size.width/2, bounds.size.height/2)
+        let xHalfSize:CGFloat = bounds.size.width/2 
         let yHalfSize:CGFloat = bounds.size.height/2
         
         let desiredLineWidth:CGFloat = 1

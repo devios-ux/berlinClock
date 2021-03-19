@@ -12,7 +12,6 @@ protocol BerlinClockDelegate : AnyObject {
 }
 
 public class BerlinClockView : UIView {
-    
 
     var circle: RingView!
     var rect11: RectangleView!
@@ -37,7 +36,6 @@ public class BerlinClockView : UIView {
     var rect310: RectangleView!
     var rect311: RectangleView!
   
-    
     var rect41: RectangleView!
     var rect42: RectangleView!
     var rect43: RectangleView!
@@ -65,7 +63,6 @@ public class BerlinClockView : UIView {
         circle.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25, constant: -30).isActive = true
         circle.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.20, constant: -30).isActive = true
         
-        
         rect11 = RectangleView()
         self.addSubview(rect11)
 
@@ -90,16 +87,14 @@ public class BerlinClockView : UIView {
         rect12.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        rect13 = RectangleView() //RectangleView()
+        rect13 = RectangleView()
         self.addSubview(rect13)
         
         rect13.centerYAnchor.constraint(equalTo: rect12.centerYAnchor).isActive = true
-        //rect113.leadingAnchor.constraint(equalTo: rect112.trailingAnchor,constant: 20).isActive = true
-        
         rect13.widthAnchor.constraint(equalTo: rect12.widthAnchor).isActive = true
         rect13.heightAnchor.constraint(equalTo: rect12.heightAnchor).isActive = true
         
-        rect14 = RectangleView() //RectangleView()
+        rect14 = RectangleView()
         self.addSubview(rect14)
         
         rect14.centerYAnchor.constraint(equalTo: rect13.centerYAnchor).isActive = true
@@ -120,18 +115,15 @@ public class BerlinClockView : UIView {
                                    constant: 20).isActive = true
         rect21.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
-        
         rect21.widthAnchor.constraint(equalTo: self.widthAnchor,
                                      multiplier: 0.25, constant: -30).isActive = true
         rect21.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
 
-        
-        rect22 = RectangleView() //RectangleView()
+        rect22 = RectangleView()
         self.addSubview(rect22)
         
         rect22.centerYAnchor.constraint(equalTo: rect21.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect22.leadingAnchor.constraint(equalTo: rect21.trailingAnchor,
                                        constant: 20).isActive = true
         rect22.widthAnchor.constraint(equalTo: self.widthAnchor,
@@ -139,7 +131,7 @@ public class BerlinClockView : UIView {
         rect22.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        rect23 = RectangleView() //RectangleView()
+        rect23 = RectangleView()
         self.addSubview(rect23)
         
         rect23.centerYAnchor.constraint(equalTo: rect22.centerYAnchor).isActive = true
@@ -148,7 +140,7 @@ public class BerlinClockView : UIView {
         rect23.widthAnchor.constraint(equalTo: rect22.widthAnchor).isActive = true
         rect23.heightAnchor.constraint(equalTo: rect22.heightAnchor).isActive = true
         
-        rect24 = RectangleView() //RectangleView()
+        rect24 = RectangleView()
         self.addSubview(rect24)
         
         rect24.centerYAnchor.constraint(equalTo: rect23.centerYAnchor).isActive = true
@@ -173,14 +165,12 @@ public class BerlinClockView : UIView {
                                    constant: 20).isActive = true
         rect31.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
-        
-        
         rect31.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
         rect31.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
   
-        rect32 = RectangleView() //RectangleView()
+        rect32 = RectangleView()
         self.addSubview(rect32)
         
         rect32.centerYAnchor.constraint(equalTo: rect31.centerYAnchor).isActive = true
@@ -191,11 +181,10 @@ public class BerlinClockView : UIView {
         rect32.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        rect33 = RectangleView() //RectangleView()
+        rect33 = RectangleView()
         self.addSubview(rect33)
         
         rect33.centerYAnchor.constraint(equalTo: rect32.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect33.leadingAnchor.constraint(equalTo: rect32.trailingAnchor,
                                        constant: leadingspace).isActive = true
         rect33.widthAnchor.constraint(equalTo: self.widthAnchor,
@@ -204,7 +193,7 @@ public class BerlinClockView : UIView {
                                         multiplier: 0.20, constant: -30).isActive = true
         
         
-        rect34 = RectangleView() //RectangleView()
+        rect34 = RectangleView()
         self.addSubview(rect34)
         
         rect34.centerYAnchor.constraint(equalTo: rect33.centerYAnchor).isActive = true
@@ -215,8 +204,7 @@ public class BerlinClockView : UIView {
         rect34.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        
-        rect35 = RectangleView() //RectangleView()
+        rect35 = RectangleView()
         self.addSubview(rect35)
         
         rect35.centerYAnchor.constraint(equalTo: rect34.centerYAnchor).isActive = true
@@ -227,43 +215,34 @@ public class BerlinClockView : UIView {
         rect35.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        
-        
-        rect36 = RectangleView() //RectangleView()
+        rect36 = RectangleView()
         self.addSubview(rect36)
         
         rect36.centerYAnchor.constraint(equalTo: rect35.centerYAnchor).isActive = true
         rect36.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        
-        //rect316.leadingAnchor.constraint(equalTo: rect35.trailingAnchor,constant: 20).isActive = true
         rect36.widthAnchor.constraint(equalTo: self.widthAnchor,multiplier: multiplier11, constant: constantWith).isActive = true
         rect36.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
         
-        
-        rect37 = RectangleView() //RectangleView()
+        rect37 = RectangleView()
         self.addSubview(rect37)
         
         rect37.centerYAnchor.constraint(equalTo: rect36.centerYAnchor).isActive = true
-        //rect37.leadingAnchor.constraint(equalTo: rect316.trailingAnchor,constant: 20).isActive = true
         rect37.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
         rect37.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         
-        
-        rect38 = RectangleView() //RectangleView()
+        rect38 = RectangleView()
         self.addSubview(rect38)
         
         rect38.centerYAnchor.constraint(equalTo: rect37.centerYAnchor).isActive = true
-        //rect38.leadingAnchor.constraint(equalTo: rect37.trailingAnchor,constant: 20).isActive = true
         rect38.widthAnchor.constraint(equalTo: self.widthAnchor,
                                        multiplier: multiplier11, constant: constantWith).isActive = true
         rect38.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
         rect37.trailingAnchor.constraint(equalTo: rect38.leadingAnchor, constant: trailingspace).isActive = true
        
-        
-        rect39 = RectangleView() //RectangleView()
+        rect39 = RectangleView()
         self.addSubview(rect39)
         
         rect39.centerYAnchor.constraint(equalTo: rect38.centerYAnchor).isActive = true
@@ -272,8 +251,7 @@ public class BerlinClockView : UIView {
         rect39.heightAnchor.constraint(equalTo: self.heightAnchor,multiplier: 0.20, constant: -30).isActive = true
         rect38.trailingAnchor.constraint(equalTo: rect39.leadingAnchor, constant: trailingspace).isActive = true
 
-        
-        rect310 = RectangleView() //RectangleView()
+        rect310 = RectangleView()
         self.addSubview(rect310)
         
         rect310.centerYAnchor.constraint(equalTo: rect39.centerYAnchor).isActive = true
@@ -282,10 +260,9 @@ public class BerlinClockView : UIView {
                                        multiplier: multiplier11, constant: constantWith).isActive = true
         rect310.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
-        
         rect39.trailingAnchor.constraint(equalTo: rect310.leadingAnchor, constant: trailingspace).isActive = true
         
-        rect311 = RectangleView() //RectangleView()
+        rect311 = RectangleView()
         self.addSubview(rect311)
         
         rect311.centerYAnchor.constraint(equalTo: rect310.centerYAnchor).isActive = true
@@ -304,18 +281,15 @@ public class BerlinClockView : UIView {
                                    constant: 20).isActive = true
         rect41.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                        constant: 20).isActive = true
-        
         rect41.widthAnchor.constraint(equalTo: self.widthAnchor,
                                      multiplier: 0.25, constant: -30).isActive = true
         rect41.heightAnchor.constraint(equalTo: self.heightAnchor,
                                       multiplier: 0.20, constant: -30).isActive = true
 
-        
-        rect42 = RectangleView() //RectangleView()
+        rect42 = RectangleView()
         self.addSubview(rect42)
         
         rect42.centerYAnchor.constraint(equalTo: rect41.centerYAnchor).isActive = true
-        //rect212.topAnchor.constraint(equalTo: rect211.topAnchor).isActive = true
         rect42.leadingAnchor.constraint(equalTo: rect41.trailingAnchor,
                                        constant: 20).isActive = true
         rect42.widthAnchor.constraint(equalTo: self.widthAnchor,
@@ -323,7 +297,7 @@ public class BerlinClockView : UIView {
         rect42.heightAnchor.constraint(equalTo: self.heightAnchor,
                                         multiplier: 0.20, constant: -30).isActive = true
     
-        rect43 = RectangleView() //RectangleView()
+        rect43 = RectangleView()
         self.addSubview(rect43)
         
         rect43.centerYAnchor.constraint(equalTo: rect42.centerYAnchor).isActive = true
@@ -332,7 +306,7 @@ public class BerlinClockView : UIView {
         rect43.widthAnchor.constraint(equalTo: rect42.widthAnchor).isActive = true
         rect43.heightAnchor.constraint(equalTo: rect42.heightAnchor).isActive = true
         
-        rect44 = RectangleView() //RectangleView()
+        rect44 = RectangleView()
         self.addSubview(rect44)
         
         rect44.centerYAnchor.constraint(equalTo: rect43.centerYAnchor).isActive = true
@@ -367,145 +341,19 @@ public class BerlinClockView : UIView {
             let topMinutesColors = BerlinTopMinuteOuput(representation: topMinutesString).getColors()
             
             DispatchQueue.main.async {
-                
                 self.circle.fillColor = string == "Y" ? UIColor.yellow.cgColor : UIColor.red.cgColor
-            
                 self.circle.setNeedsDisplay()
-                
+        
                 self.setTopHoursColors(colors: topHourcolors)
-                
                 self.setBottomHoursColors(colors: bottomHoursColors)
                 self.setBottomMinuteColors(colors: bottomMinutesColors)
                 self.setTopMinuteColors(colors: topMinutesColors)
                 
                 let stringRespresentation = "\(topHourString) \(bottomHourString) \(topMinutesString) \(bottomMinutesString)"
-                
                 self.delegate?.berlinClockDidChanged(stringRespresentation)
-                
             }
         }
-
     }
-    
-    
-   func createSubviews() {
-    
-        let x = 150
-        let widthCircle = Int(self.frame.width) - 2 * x
-        
-        let paddingTop = 10
-    
-        circle = RingView(frame: CGRect(x: x, y: 0 + paddingTop, width: widthCircle, height: widthCircle))
-        
-        
-        var yRect = paddingTop + Int(self.circle.frame.height) + 10
-        
-        rect11 = RectangleView(frame: CGRect(x: 0, y:yRect, width: Int(self.frame.width) / 4 , height: 100))
-        rect12 = RectangleView(frame: CGRect(x: 1 * Int(rect11.frame.width), y:yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect13 = RectangleView(frame: CGRect(x: 2 * Int(rect11.frame.width), y:yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect14 = RectangleView(frame: CGRect(x: 3 * Int(rect11.frame.width), y:yRect, width: Int(self.frame.width) / 4, height: 100))
-        
-        
-        yRect = yRect + Int(self.rect11.frame.height) + 10
-        
-        rect21 = RectangleView(frame: CGRect(x: 0, y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect22 = RectangleView(frame: CGRect(x: 1 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect23 = RectangleView(frame: CGRect(x: 2 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect24 = RectangleView(frame: CGRect(x: 3 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-
-        yRect = yRect + Int(rect11.frame.height) + 10
-        
-        rect31 = RectangleView(frame: CGRect(x: 0, y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect32 = RectangleView(frame: CGRect(x: 1 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect33 = RectangleView(frame: CGRect(x: 2 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect34 = RectangleView(frame: CGRect(x: 3 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect35 = RectangleView(frame: CGRect(x: 4 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect36 = RectangleView(frame: CGRect(x: 5 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect37 = RectangleView(frame: CGRect(x: 6 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect38 = RectangleView(frame: CGRect(x: 7 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect39 = RectangleView(frame: CGRect(x: 8 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect310 = RectangleView(frame: CGRect(x: 9 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-        rect311 = RectangleView(frame: CGRect(x: 10 * Int(rect31.frame.width), y: yRect, width: Int(self.frame.width) / 11, height: 100))
-       
-        yRect = yRect + Int(rect11.frame.height) + 10
-        
-        rect41 = RectangleView(frame: CGRect(x: 0, y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect42 = RectangleView(frame: CGRect(x: 1 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect43 = RectangleView(frame: CGRect(x: 2 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-        rect44 = RectangleView(frame: CGRect(x: 3 * Int(rect11.frame.width), y: yRect, width: Int(self.frame.width) / 4, height: 100))
-
-        
-        self.addSubview(circle)
-        self.addSubview(rect11)
-        self.addSubview(rect12)
-        self.addSubview(rect13)
-        self.addSubview(rect14)
-        
-        self.addSubview(rect21)
-        self.addSubview(rect22)
-        self.addSubview(rect23)
-        self.addSubview(rect24)
-        
-        self.addSubview(rect31)
-        self.addSubview(rect32)
-        self.addSubview(rect33)
-        self.addSubview(rect34)
-        self.addSubview(rect35)
-        self.addSubview(rect36)
-        self.addSubview(rect37)
-        self.addSubview(rect38)
-        self.addSubview(rect39)
-        self.addSubview(rect310)
-        self.addSubview(rect311)
-
-        self.addSubview(rect41)
-        self.addSubview(rect42)
-        self.addSubview(rect43)
-        self.addSubview(rect44)
-      
-        // Change UIView background colour
-        self.backgroundColor=UIColor.lightGray
-        self.layer.borderColor = UIColor.red.cgColor
-    
-    // update control every secondes
-    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-        let hour = Calendar.current.component(.hour, from: Date())
-        let minute = Calendar.current.component(.minute, from: Date())
-        let second = Calendar.current.component(.second, from: Date())
-        
-        let berlin = BerlinClock()
-                    
-        let string = berlin.getSeconds(seconds: second)
-        let topHourString = berlin.getTopHours(hour: hour)
-        let bottomHourString = berlin.getBottomHours(hour: hour)
-        let bottomMinutesString = berlin.getBottomMinutes(minutes: minute)
-        let topMinutesString = berlin.getTopMinutes(minutes: minute)
-        
-        let topHourcolors = BerlinHourOuput(representation: topHourString).getColors()
-        let bottomHoursColors = BerlinHourOuput(representation: bottomHourString).getColors()
-        let bottomMinutesColors = BerlinBottomMinuteOuput(representation: bottomMinutesString).getColors()
-        let topMinutesColors = BerlinTopMinuteOuput(representation: topMinutesString).getColors()
-        
-        DispatchQueue.main.async {
-            
-            self.circle.fillColor = string == "Y" ? UIColor.yellow.cgColor : UIColor.red.cgColor
-        
-            self.circle.setNeedsDisplay()
-            
-            self.setTopHoursColors(colors: topHourcolors)
-            
-            self.setBottomHoursColors(colors: bottomHoursColors)
-            self.setBottomMinuteColors(colors: bottomMinutesColors)
-            self.setTopMinuteColors(colors: topMinutesColors)
-            
-            let stringRespresentation = "\(topHourString) \(bottomHourString) \(topMinutesString) \(bottomMinutesString)"
-            
-            self.delegate?.berlinClockDidChanged(stringRespresentation)
-            
-        }
-    }
-
-   }
     
     func setTopHoursColors(colors: [UIColor]){
         rect11.fillColor = colors[0].cgColor
@@ -517,7 +365,6 @@ public class BerlinClockView : UIView {
         rect12.setNeedsDisplay()
         rect13.setNeedsDisplay()
         rect14.setNeedsDisplay()
-        
     }
     
     func setBottomHoursColors(colors: [UIColor]){
@@ -530,9 +377,7 @@ public class BerlinClockView : UIView {
         rect22.setNeedsDisplay()
         rect23.setNeedsDisplay()
         rect24.setNeedsDisplay()
-        
     }
-    
     
     func setBottomMinuteColors(colors: [UIColor]){
         rect41.fillColor = colors[0].cgColor
@@ -570,8 +415,6 @@ public class BerlinClockView : UIView {
         rect39.setNeedsDisplay()
         rect310.setNeedsDisplay()
         rect311.setNeedsDisplay()
-        
    }
- 
 }
 
